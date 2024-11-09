@@ -18,9 +18,7 @@
 - [Model Evaluation](#model-evaluation)
 - [Results](#results)
 - [Conclusion](#conclusion)
-- [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
@@ -79,3 +77,59 @@ sns.histplot(data['price'], bins=30, kde=True)
 plt.title("Price Distribution")
 plt.show()
 ```
+## Data Processing
+### Handling Missing Values
+Missing values were handled by techniques like imputing with mean/median values for numerical columns and mode for categorical columns.
+
+### Feature Engineering
+Some key transformations:
+
+- Location Encoding: Converting categorical locations into numerical formats.
+- Outliers Removal: Removing properties with unusually high or low prices.
+- Normalization: Normalizing numeric features to improve model training
+## Modeling
+Various regression models were applied to predict the price of a property:
+
+- Linear Regression: A basic model that helps establish a baseline.
+- Decision Tree Regression: A non-linear model capable of capturing complex patterns.
+- Random Forest Regression: An ensemble method that combines multiple decision trees for robust predictions.
+- XGBoost Regression: A powerful model that uses gradient boosting for enhanced performance.
+## Model Evaluation
+The models were evaluated using metrics like:
+
+- Root Mean Squared Error (RMSE): Measures the average magnitude of prediction error.
+- Mean Absolute Error (MAE): Represents the average absolute error between predictions and actual values.
+## Results
+A summary of model performance:
+
+|Model|	RMSE|	MAE|
+|------|--------|------|
+|Linear Regression	| ... |	...|
+|Decision Tree|	...|	...|
+|Random Forest	|...	|...|
+|XGBoost|...	|...|
+## Conclusion
+This project demonstrated the prediction of real estate prices using various machine learning models, with Random Forest or XGBoost typically yielding the most accurate results. The project illustrates effective feature engineering and modeling for real estate data.
+## Project Structure
+```css
+bangalore-real-estate-prediction/
+│
+├── data/
+│   ├── bangalore_real_estate.csv
+│
+├── notebooks/
+│   ├── EDA.ipynb
+│   ├── Model_Training.ipynb
+│
+├── src/
+│   ├── preprocessing.py
+│   ├── model_training.py
+│
+├── README.md
+└── LICENSE
+```
+## License
+This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
+## Contact
+Mohammed Ammaruddin
+md.ammaruddin2020@gmail.com
